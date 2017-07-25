@@ -1,0 +1,7 @@
+<launch>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find sample_panel)/maps/willow-2010-02-18-0.10.yaml" />
+
+  <node pkg="tf" type="static_transform_publisher" name="tmp_tf" args="0 0 0 0 0 0 map base_link 100" />
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find sample_panel)/launch/sample_panel.rviz" output="screen" />
+</launch>

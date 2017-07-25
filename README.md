@@ -1,1 +1,0 @@
-# rviz_panel_sample
